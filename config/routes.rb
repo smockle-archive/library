@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :users
+
+  resources :rentals
+
+  resources :holds
+
+  resources :items
+
+  resources :item_templates
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

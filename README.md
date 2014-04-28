@@ -10,7 +10,9 @@ UserController - for CRUD Patron/Librarian
 MODEL
 =====
 ItemTemplate # has_many :patrons, through: :holds
+             # has_many :items
 Item # has_many :patrons, through: :rentals
+     # belongs_to :itemtemplate
 Hold # belongs_to :itemtemplate; belongs_to :patron
 Rental # belongs_to :item; belongs_to :patron
 Librarian

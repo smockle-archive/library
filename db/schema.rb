@@ -11,9 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140428095930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "holds", force: true do |t|
+    t.datetime "timestamp"
+    t.datetime "redeem_date"
+    t.boolean  "is_redeemed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "item_templates", force: true do |t|
+    t.string   "title"
+    t.datetime "copyright_date"
+    t.string   "genre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rentals", force: true do |t|
+    t.datetime "timestamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

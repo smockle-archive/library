@@ -1,0 +1,29 @@
+<%= form_for(@hold) do |f| %>
+  <% if @hold.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hold.errors.count, "error") %> prohibited this hold from being saved:</h2>
+
+      <ul>
+      <% @hold.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :timestamp %><br>
+    <%= f.datetime_select :timestamp %>
+  </div>
+  <div class="field">
+    <%= f.label :redeem_date %><br>
+    <%= f.datetime_select :redeem_date %>
+  </div>
+  <div class="field">
+    <%= f.label :is_redeemed %><br>
+    <%= f.check_box :is_redeemed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

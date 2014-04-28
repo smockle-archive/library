@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @hold.timestamp %>
+</p>
+
+<p>
+  <strong>Redeem date:</strong>
+  <%= @hold.redeem_date %>
+</p>
+
+<p>
+  <strong>Is redeemed:</strong>
+  <%= @hold.is_redeemed %>
+</p>
+
+<%= link_to 'Edit', edit_hold_path(@hold) %> |
+<%= link_to 'Back', holds_path %>
