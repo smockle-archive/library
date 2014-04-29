@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= depend_on normalize.scss
+ *= depend_on font_awesome.scss
+ */
+
+@import "normalize";
+@import "font_awesome";
+
+$purple: #6f677f;
+$white: lighten($purple, 50%);
+$gray: lighten($purple, 33%);
+$black: lighten($purple, 12.5%);
+
+$screen-sm: 25em;
+$screen-md: 50em;
+
+$font: "effra", sans-serif;
+
+html {
+  font-size: 18px;
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: $purple;
+  color: $white;
+  display: flex;
+  font-family: $font;
+  height: 100%;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $black;
+}
+
+::selection {
+  color: $white;
+  background: $black;
+}
+
+.branding {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.logo {
+  font-size: 4rem;
+  margin-right: 3rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $screen-sm) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .container {
+    width: 25%;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $white;
+}
+
+:-ms-input-placeholder {
+  color: $white;
+}
+
+input {
+  background: transparent;
+  border: 2px solid $white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $white;
+  font: 300 1.2rem $font;
+  margin-bottom: 0.75rem;
+  outline-style: none;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: $gray;
+}
+
+input:focus:-moz-placeholder { /* Firefox 18- */
+  color: $gray;
+}
+
+input:focus::-moz-placeholder {  /* Firefox 19+ */
+  color: $gray;
+}
+
+input:focus:-ms-input-placeholder {
+  color: $gray;
+}
+
+input:focus {
+  border: 2px solid $gray;
+  color: $gray;
+}
+
+button {
+  background: $white;
+  border: 2px solid $white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $purple;
+  font: 300 1.2rem "proxima-nova", sans-serif;
+  padding: 0.2rem 0.5rem;
+}
+
+button:hover {
+  background: $gray;
+  border: 2px solid $gray;
+}
