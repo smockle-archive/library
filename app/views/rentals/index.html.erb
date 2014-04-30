@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Timestamp</th>
       <th colspan="3"></th>
     </tr>
@@ -11,6 +12,7 @@
   <tbody>
     <% @rentals.each do |rental| %>
       <tr>
+        <td><%= rental.id %></td>
         <td><%= rental.timestamp %></td>
         <td><%= link_to 'Show', rental %></td>
         <td><%= link_to 'Edit', edit_rental_path(rental) %></td>

@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Timestamp</th>
       <th>Redeem date</th>
       <th>Is redeemed</th>
@@ -13,6 +14,7 @@
   <tbody>
     <% @holds.each do |hold| %>
       <tr>
+        <td><%= hold.id %></td>
         <td><%= hold.timestamp %></td>
         <td><%= hold.redeem_date %></td>
         <td><%= hold.is_redeemed %></td>

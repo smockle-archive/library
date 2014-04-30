@@ -30,6 +30,7 @@ $font: "effra", sans-serif;
 
 html {
   font-size: 18px;
+  font-weight: 300;
   height: 100%;
 }
 
@@ -46,6 +47,10 @@ body {
 h1 {
   font-weight: 300;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 ::-moz-selection {
@@ -86,27 +91,27 @@ h1 {
 }
 
 ::-webkit-input-placeholder {
-  color: $white;
+  color: $gray;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: $white;
+  color: $gray;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  color: $white;
+  color: $gray;
 }
 
 :-ms-input-placeholder {
-  color: $white;
+  color: $gray;
 }
 
 input {
   background: transparent;
-  border: 2px solid $white;
+  border: 2px solid $gray;
   border-radius: 2px;
   box-sizing: border-box;
-  color: $white;
+  color: $gray;
   font: 300 1.2rem $font;
   margin-bottom: 0.75rem;
   outline-style: none;
@@ -115,27 +120,27 @@ input {
 }
 
 input:focus::-webkit-input-placeholder {
-  color: $gray;
+  color: $white;
 }
 
 input:focus:-moz-placeholder { /* Firefox 18- */
-  color: $gray;
+  color: $white;
 }
 
 input:focus::-moz-placeholder {  /* Firefox 19+ */
-  color: $gray;
+  color: $white;
 }
 
 input:focus:-ms-input-placeholder {
-  color: $gray;
+  color: $white;
 }
 
 input:focus {
-  border: 2px solid $gray;
-  color: $gray;
+  border: 2px solid $white;
+  color: $white;
 }
 
-button {
+.button {
   background: $white;
   border: 2px solid $white;
   border-radius: 2px;
@@ -145,7 +150,35 @@ button {
   padding: 0.2rem 0.5rem;
 }
 
-button:hover {
+.button:hover {
+  background: $gray;
+  border: 2px solid $gray;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choices {
+  list-style: none;
+  padding: 0;
+}
+
+.choices li {
+  border: 2px solid $white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font: 300 1.2rem "proxima-nova", sans-serif;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.choices a {
+  color: $white;
+}
+
+.choices li:hover {
   background: $gray;
   border: 2px solid $gray;
 }

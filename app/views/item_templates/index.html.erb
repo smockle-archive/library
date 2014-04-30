@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Copyright date</th>
       <th>Genre</th>
@@ -13,6 +14,7 @@
   <tbody>
     <% @item_templates.each do |item_template| %>
       <tr>
+        <td><%= item_template.id %></td>
         <td><%= item_template.title %></td>
         <td><%= item_template.copyright_date %></td>
         <td><%= item_template.genre %></td>
