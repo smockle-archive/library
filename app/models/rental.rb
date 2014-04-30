@@ -1,3 +1,4 @@
 class Rental < ActiveRecord::Base
-  belongs_to :item; belongs_to :patron
+  belongs_to :item
+  belongs_to :patron
 end

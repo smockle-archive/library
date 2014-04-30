@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140428095930) do
     t.datetime "timestamp"
     t.datetime "redeem_date"
     t.boolean  "is_redeemed"
+    t.integer  "itemtemplate_id"
+    t.integer  "patron_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,12 +36,15 @@ ActiveRecord::Schema.define(version: 20140428095930) do
 
   create_table "items", force: true do |t|
     t.string   "status"
+    t.integer  "itemtemplate_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "rentals", force: true do |t|
     t.datetime "timestamp"
+    t.integer  "item_id"
+    t.integer  "patron_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
